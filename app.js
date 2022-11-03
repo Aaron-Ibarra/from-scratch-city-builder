@@ -18,7 +18,7 @@ let villainCounter = 0;
 heroSelect.addEventListener('change', (e) => {
     const value = e.target.value;
     heroCounter++;
-    //heroEl.style.backgroundImage = `url('')`;
+    heroEl.style.backgroundImage = `url('./assets/${value}.png')`;
 });
 
 arenaSelect.addEventListener('change', (e) => {
