@@ -40,7 +40,7 @@ villainSelect.addEventListener('change', (e) => {
 voicelineBtn.addEventListener('click', () => {
     const value = voicelineInput.value;
     voicelines.push(value);
-    console.log(voicelines);
+    voicelineInput.value = '';
 });
 
 /* Display Functions */
