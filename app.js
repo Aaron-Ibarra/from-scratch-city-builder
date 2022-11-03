@@ -11,6 +11,7 @@ const villainSelect = document.getElementById('villain-dropdown');
 
 const voicelineInput = document.getElementById('voiceline-input');
 const voicelineBtn = document.getElementById('voiceline-btn');
+const voicelineDisDiv = document.getElementById('voiceline-display');
 
 /* State */
 let heroCounter = 0;
@@ -41,7 +42,17 @@ voicelineBtn.addEventListener('click', () => {
     const value = voicelineInput.value;
     voicelines.push(value);
     voicelineInput.value = '';
+    displayVoicelines();
 });
 
 /* Display Functions */
 // (don't forget to call any display functions you want to run on page load!)
+
+function displayVoicelines() {
+    voicelineDisDiv.textContent = '';
+    for (let voiceline of voicelines) {
+        const p = document.createElement('p');
+        p.textContent = voiceline;
+        voicelineDisDiv.append(p);
+    }
+}
