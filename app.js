@@ -24,15 +24,13 @@ heroSelect.addEventListener('change', (e) => {
 arenaSelect.addEventListener('change', (e) => {
     const value = e.target.value;
     arenaCounter++;
-    //arenaEl.style.backgroundImage = `url('')`;
+    arenaEl.style.backgroundImage = `url('./assets/${value}.png')`;
 });
 
 villainSelect.addEventListener('change', (e) => {
     const value = e.target.value;
     villainCounter++;
-    //villainEl.style.backgroundImage = `url('')`;
-    console.log(value);
-    console.log(villainCounter);
+    villainEl.style.backgroundImage = `url('./assets/${value}.png')`;
 });
 
 /* Display Functions */
