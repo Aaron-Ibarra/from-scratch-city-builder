@@ -16,13 +16,12 @@ heroSelect.addEventListener('change', (e) => {
     const value = e.target.value;
     heroCounter++;
     //heroEl.style.backgroundImage = `url('')`;
-    console.log(heroCounter);
 });
 
 arenaSelect.addEventListener('change', (e) => {
     const value = e.target.value;
     arenaCounter++;
-    console.log(arenaCounter);
+    //arenaEl.style.backgroundImage = `url('')`;
 });
 
 /* Display Functions */
