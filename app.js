@@ -12,6 +12,9 @@ const villainSelect = document.getElementById('villain-dropdown');
 const voicelineInput = document.getElementById('voiceline-input');
 const voicelineBtn = document.getElementById('voiceline-btn');
 const voicelineDisDiv = document.getElementById('voiceline-display');
+const voiceVillainInput = document.getElementById('voicevillain-input');
+const voiceVillainBtn = document.getElementById('voicevillain-btn');
+const voiceVillainDisDiv = document.getElementById('voicevillain-display');
 
 const heroTally = document.getElementById('hero-tally');
 const arenaTally = document.getElementById('arena-tally');
@@ -22,6 +25,7 @@ let heroCounter = 0;
 let arenaCounter = 0;
 let villainCounter = 0;
 let voicelines = [];
+let voicevillains = [];
 
 /* Events */
 heroSelect.addEventListener('change', (e) => {
@@ -52,6 +56,13 @@ voicelineBtn.addEventListener('click', () => {
     displayVoicelines();
 });
 
+voiceVillainBtn.addEventListener('click', () => {
+    const value = voiceVillainInput.value;
+    voicevillains.push(value);
+    voiceVillainInput.value = '';
+    displayVoiceVillains();
+});
+
 /* Display Functions */
 // (don't forget to call any display functions you want to run on page load!)
 
@@ -61,6 +72,15 @@ function displayVoicelines() {
         const p = document.createElement('p');
         p.textContent = voiceline;
         voicelineDisDiv.append(p);
+    }
+}
+
+function displayVoiceVillains() {
+    voiceVillainDisDiv.textContent = '';
+    for (let voicevillain of voicevillains) {
+        const p = document.createElement('p');
+        p.textContent = voicevillain;
+        voiceVillainDisDiv.append(p);
     }
 }
 
