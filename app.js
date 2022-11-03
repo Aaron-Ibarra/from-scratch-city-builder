@@ -9,6 +9,9 @@ const heroSelect = document.getElementById('hero-dropdown');
 const arenaSelect = document.getElementById('arena-dropdown');
 const villainSelect = document.getElementById('villain-dropdown');
 
+const voicelineInput = document.getElementById('voiceline-input');
+const voicelineBtn = document.getElementById('voiceline-btn');
+
 /* State */
 let heroCounter = 0;
 let arenaCounter = 0;
@@ -31,6 +34,11 @@ villainSelect.addEventListener('change', (e) => {
     const value = e.target.value;
     villainCounter++;
     villainEl.style.backgroundImage = `url('./assets/${value}.png')`;
+});
+
+voicelineBtn.addEventListener('click', () => {
+    const value = voicelineInput.value;
+    console.log(value);
 });
 
 /* Display Functions */
