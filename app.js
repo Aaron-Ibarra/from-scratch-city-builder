@@ -16,6 +16,7 @@ const voicelineBtn = document.getElementById('voiceline-btn');
 let heroCounter = 0;
 let arenaCounter = 0;
 let villainCounter = 0;
+let voicelines = [];
 
 /* Events */
 heroSelect.addEventListener('change', (e) => {
@@ -38,7 +39,8 @@ villainSelect.addEventListener('change', (e) => {
 
 voicelineBtn.addEventListener('click', () => {
     const value = voicelineInput.value;
-    console.log(value);
+    voicelines.push(value);
+    console.log(voicelines);
 });
 
 /* Display Functions */
