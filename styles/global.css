@@ -39,3 +39,14 @@ main {
     background-position: center;
     height: 300px;
 }
+
+.selectors-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.selection {
+    padding: 30px;
+    border: solid black;
+}
