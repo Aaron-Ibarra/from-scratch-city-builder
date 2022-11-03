@@ -13,6 +13,10 @@ const voicelineInput = document.getElementById('voiceline-input');
 const voicelineBtn = document.getElementById('voiceline-btn');
 const voicelineDisDiv = document.getElementById('voiceline-display');
 
+const heroTally = document.getElementById('hero-tally');
+const arenaTally = document.getElementById('arena-tally');
+const villainTally = document.getElementById('villain-tally');
+
 /* State */
 let heroCounter = 0;
 let arenaCounter = 0;
@@ -24,18 +28,21 @@ heroSelect.addEventListener('change', (e) => {
     const value = e.target.value;
     heroCounter++;
     heroEl.style.backgroundImage = `url('./assets/${value}.png')`;
+    displayTallies();
 });
 
 arenaSelect.addEventListener('change', (e) => {
     const value = e.target.value;
     arenaCounter++;
     arenaEl.style.backgroundImage = `url('./assets/${value}.png')`;
+    displayTallies();
 });
 
 villainSelect.addEventListener('change', (e) => {
     const value = e.target.value;
     villainCounter++;
     villainEl.style.backgroundImage = `url('./assets/${value}.png')`;
+    displayTallies();
 });
 
 voicelineBtn.addEventListener('click', () => {
@@ -55,4 +62,10 @@ function displayVoicelines() {
         p.textContent = voiceline;
         voicelineDisDiv.append(p);
     }
+}
+
+function displayTallies() {
+    heroTally.textContent = heroCounter;
+    arenaTally.textContent = arenaCounter;
+    villainTally.textContent = villainCounter;
 }
