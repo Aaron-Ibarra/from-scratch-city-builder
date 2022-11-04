@@ -28,7 +28,14 @@ let voicelines = [];
 let voicevillains = [];
 
 /* Events */
+
+setImages();
+
 heroSelect.addEventListener('change', (e) => {
+    voicelineDisDiv.textContent = '';
+    voicelines = [];
+    displayVoicelines();
+
     const value = e.target.value;
     heroCounter++;
     heroEl.style.backgroundImage = `url('./assets/${value}.png')`;
@@ -43,6 +50,10 @@ arenaSelect.addEventListener('change', (e) => {
 });
 
 villainSelect.addEventListener('change', (e) => {
+    voiceVillainDisDiv.textContent = '';
+    voicevillains = [];
+    displayVoiceVillains();
+
     const value = e.target.value;
     villainCounter++;
     villainEl.style.backgroundImage = `url('./assets/${value}.png')`;
@@ -88,4 +99,10 @@ function displayTallies() {
     heroTally.textContent = heroCounter;
     arenaTally.textContent = arenaCounter;
     villainTally.textContent = villainCounter;
+}
+
+function setImages() {
+    heroEl.style.backgroundImage = `url('./assets/batman.png')`;
+    arenaEl.style.backgroundImage = `url('./assets/arkham-city.png')`;
+    villainEl.style.backgroundImage = `url('./assets/joker.png')`;
 }
