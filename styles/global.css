@@ -1,5 +1,5 @@
 :root {
-    --background: rgb(224, 234, 247);
+    --background: rgb(156, 198, 253);
     --header-background: rgb(254, 251, 245);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
@@ -38,6 +38,7 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     height: 300px;
+    margin-top: 30px;
 }
 
 .selectors-one {
@@ -48,5 +49,14 @@ main {
 
 .selection {
     padding: 30px;
-    border: solid black;
+    border: solid rgb(0, 0, 0);
+    border-width: 50px;
+}
+
+#arena-div {
+    width: 500px;
+}
+
+.voicelines {
+    border: none;
 }
