@@ -1,39 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Battle Arena</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <h1>Battle Arena</h1>
+        </header>
 
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main>
+            <section class="selectors-one">
+                <div class="selection" id="hero-div">
+                    <label>
+                        Hero
+                        <select id="hero-dropdown">
+                            <option value="batman">Batman</option>
+                            <option value="robin">Robin</option>
+                            <option value="mermaid-man">Mermaid Man</option>
+                        </select>
+                        <div class="bg hero" id="hero"></div>
+                    </label>
+                    <div class="selection voicelines" id="voiceline-div">
+                        <label>
+                            Add a hero voice line!
+                            <input id="voiceline-input" />
+                            <button id="voiceline-btn">Submit</button>
+                            <div id="voiceline-display"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="selection" id="arena-div">
+                    <label>
+                        Arena
+                        <select id="arena-dropdown">
+                            <option value="arkham-city">Arkham City</option>
+                            <option value="asylum">Asylum</option>
+                            <option value="chum-bucket">Chum Bucket</option>
+                        </select>
+                        <div class="bg arena" id="arena"></div>
+                    </label>
+                </div>
+                <div class="selection" id="villain-div">
+                    <label>
+                        Villain
+                        <select id="villain-dropdown">
+                            <option value="joker">Joker</option>
+                            <option value="scarecrow">Scarecrow</option>
+                            <option value="plankton">Plankton</option>
+                        </select>
+                        <div class="bg villain" id="villain"></div>
+                    </label>
+                    <div class="selection voicelines" id="voicevillain-div">
+                        <label>
+                            Add a villain voice line!
+                            <input id="voicevillain-input" />
+                            <button id="voicevillain-btn">Submit</button>
+                            <div id="voicevillain-display"></div>
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <section id="selectors-two">
+                <div class="selection" id="tally-div">
+                    <label>
+                        Change Tracker
+                        <p>You have changed heroes <span id="hero-tally">0</span> times</p>
+                        <p>You have changed arenas <span id="arena-tally">0</span> times</p>
+                        <p>You have changed villains <span id="villain-tally">0</span> times</p>
+                    </label>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
